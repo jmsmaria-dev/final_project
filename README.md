@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# final_project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## M80 – Generative AI Innovations (Final Project)
 
-## Available Scripts
+Single Page Application (SPA) with React frontend and Node.js/Express backend using MongoDB and JWT authentication.
 
-In the project directory, you can run:
+## Tech Stack
+- Frontend: React + react-router + Chart.js (via react-chartjs-2)
+- Backend: Node.js (Express), JWT auth
+- Database: MongoDB (Mongoose)
+- Hosting (recommended): NGINX serves frontend on port 80, backend runs on port 3000 on the same server
 
-### `npm start`
+## Requirements mapping
+- App title: M80
+- Subject: Recent innovations in Generative AI (last 6 months)
+- Login: Use your first name as both username and password (hardcoded on backend; configurable via env)
+- Protected pages: Dashboard, Summary, Reports
+- Charts: Data retrieved asynchronously from backend (JWT required)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup
+1. Install dependencies
+```
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Configure environment
+```
+cp .env.example .env
+# Edit .env to set FIRST_NAME, JWT_SECRET, and MONGODB_URI
+```
 
-### `npm test`
+3. Start MongoDB locally (if not already running). On Windows you can use MongoDB Community Server or Docker.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Run the backend (port 3000)
+```
+npm run server
+```
 
-### `npm run build`
+5. In another terminal, run the frontend (CRA will prompt to use a different port if 3000 is taken):
+```
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Login with the configured FIRST_NAME (default: Maria) for both username and password. You’ll be redirected to the Dashboard and can navigate to Summary and Reports (both include charts fetched from the backend with JWT).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Production build and NGINX
+Build the frontend and serve it with NGINX on port 80. Keep the backend running on port 3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run build
+# Copy the build/ directory to /var/www/m80 (example)
+```
 
-### `npm run eject`
+Sample NGINX server block (adjust paths and domain):
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+server {
+	listen 80;
+	server_name your-domain.com;
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+	root /var/www/m80;
+	index index.html;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+	# Serve the SPA
+	location / {
+		try_files $uri /index.html;
+	}
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+	# Proxy API to backend on port 3000
+	location /api/ {
+		proxy_pass http://127.0.0.1:3000;
+		proxy_set_header Host $host;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto $scheme;
+	}
+}
+```
 
-## Learn More
+Ensure the backend process stays running using a process manager (pm2/systemd) and MongoDB is accessible.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Security notes
+- Do not commit secrets. `.env` is ignored by git.
+- JWT secret must be strong in production.
+- CORS is open by default in development; restrict origins in production.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Accessibility
+- Semantic headings and regions
+- ARIA labels on navigation
+- Keyboard-focusable controls and color contrast-aware chart palettes
 
-### Code Splitting
+## Testing
+```
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+For coursework use.

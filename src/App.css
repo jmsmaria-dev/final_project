@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  background-image: url('/adobestock_1437606041_2x1.avif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +41,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.article-summary {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  border-left: 4px solid #61dafb;
+}
+
+.article-summary h3 {
+  color: #61dafb;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.article-summary p {
+  line-height: 1.6;
+  text-align: left;
+}
+
+.article-summary a {
+  color: #61dafb;
+  word-break: break-all;
+}
+
+.article-summary a:hover {
+  text-decoration: underline;
 }

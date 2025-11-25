@@ -1,22 +1,34 @@
 import React from 'react';
-
-import {
-    Link
-} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from '../auth/AuthContext';
 
 function Menu() {
+  const { isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const onLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
   return (
-    <nav 
+    <nav
       role="navigation"
       aria-label="Main menu"
       itemScope
       itemType="https://schema.org/SiteNavigationElement"
     >
       <ul>
-        <li><Link itemProp="url" to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/login">Login</Link></li>
-        <li><a href="https://google.com">Google</a></li>
+        {isAuthenticated ? (
+          <>
+            <li><Link itemProp="url" to="/dashboard">Dashboard</Link></li>
+            <li><Link itemProp="url" to="/summary">Summary</Link></li>
+            <li><Link itemProp="url" to="/reports">Reports</Link></li>
+            <li><button onClick={onLogout} aria-label="Log out">Logout</button></li>
+          </>
+        ) : (
+          <li><Link to="/login">Login</Link></li>
+        )}
       </ul>
     </nav>
   );

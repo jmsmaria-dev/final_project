@@ -70,31 +70,7 @@ nav {
   }
 }
 
-.hero {
-  height: 350px;
-  background-color: $secondary-color;
-  background-image: url('./bg.png');
-  background-size: 400px;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  padding-top: 40px;
-
-  h1,
-  h2 {
-    text-align: center;
-    margin: 0;
-  }
-
-  h1 {
-    color: $text-color;
-    font-size: 4.2em;
-    margin-bottom: 20px;
-  }
-
-  h2 {
-    color: $primary-color;
-  }
-}
+/* Removed unused .hero section (component deleted) */
 
 main {
   padding: 40px;

@@ -1,3 +1,13 @@
+/* Background styling */
+body {
+  min-height: 100vh;
+  background-image: url('/background.svg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Accessibility: Skip to content link */
 .skip {
   position: absolute;
@@ -407,31 +417,7 @@ nav ul li a:hover {
   color: #4d5791;
 }
 
-div.hero {
-  height: 350px;
-  background-color: #b4c6f0;
-  background-image: url('./bg.png');
-  background-size: 400px;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  padding-top: 40px;
-}
-
-div.hero h1,
-div.hero h2 {
-  text-align: center;
-  margin: 0;
-}
-
-div.hero h1 {
-  color: #fff;
-  font-size: 4.2em;
-  margin-bottom: 20px;
-}
-
-div.hero h2 {
-  color: #4d5791;
-}
+/* Removed unused hero section */
 
 main {
   padding: 40px;
