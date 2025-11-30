@@ -43,109 +43,100 @@ export default function ReportsPage() {
   return (
     <main className="center" id="reports" aria-labelledby="reports-heading">
       <div className="page-area">
-        <h1 id="reports-heading">Generative AI Report: Open-Source Breakthrough</h1>
+        <h1 id="reports-heading">Generative AI Report: Recent Breakthroughs in Open-Source and Frontier Models</h1>
         <section aria-labelledby="full-report-heading" className="full-report">
-          <h2 id="full-report-heading">Full Report: The Open-Source Shift in Advanced Reasoning Models</h2>
+          <h2 id="full-report-heading">Article 1: The Open-Source Breakthrough Shifting AI's Center of Gravity</h2>
           <p>
-            This report provides an in-depth, paraphrased analysis of the recent milestone in generative AI: the emergence of an
-            open-source frontier model (Kimi K2 Thinking) that credibly challenges proprietary systems. Rather than reproducing the
-            source article verbatim (to respect copyright), the following sections synthesize its core themes, technical attributes,
-            enterprise implications, and strategic context. The development signals a redistribution of innovation leverage from closed
-            model silos toward collaborative ecosystems.
-          </p>
-          <h3>1. Architectural Foundations</h3>
-          <p>
-            K2 adopts a mixture-of-experts (MoE) design that activates only relevant parameter subsets per task. This selective routing
-            yields efficiency gains: complex reasoning chains engage deep expert pathways, while lightweight queries use minimal compute.
-            The practical outcome is elasticity—enterprises can scale advanced reasoning without linear cost explosions typical of dense
-            monolithic LLMs. Modular expert allocation also eases targeted fine-tuning and safety instrumentation.
-          </p>
-          <h3>2. High-Depth Tool Invocation</h3>
-          <p>
-            A distinguishing capability is sustained sequential tool calling (hundreds of chained invocations). This enables iterative
-            research workflows: fetch data, transform, re-evaluate hypotheses, branch, consolidate, and synthesize—all without human
-            midstream intervention. It operationalizes "interleaved thinking" where external retrieval augments reasoning context in
-            real time, reducing hallucination risk and improving task decomposition fidelity.
-          </p>
-          <h3>3. Benchmark Performance Signals</h3>
-          <p>
-            Reported gains on multifaceted reasoning suites (e.g., long-form cognitive exams and browsing comprehension tests) indicate
-            maturation in cross-modal logic coherence. Importantly, performance is paired with efficiency—competitive scores achieved
-            while preserving economic viability for self-hosting scenarios. This dual vector (quality + cost control) lowers barriers
-            for regulated industries requiring internal model governance.
-          </p>
-          <h3>4. Enterprise Impact Vector</h3>
-          <p>
-            Open-weight availability restructures procurement strategy: organizations shift from pure API consumption toward hybrid
-            integration. Benefits include auditability (inspect weights), jurisdictional compliance (data residency with self-hosted
-            inference), and bespoke guardrail layering (custom moderation or domain calibration). It also catalyzes internal AI
-            enablement teams to evolve from prompt engineering toward pipeline orchestration and safety instrumentation functions.
-          </p>
-          <h3>5. Market Segmentation: IQ vs EQ</h3>
-          <p>
-            A strategic inflection is highlighted: as raw cognitive metrics converge, differentiation migrates to experiential qualities—
-            conversational nuance, adaptive tone, and workflow embed-ability. Proprietary models emphasize user experience polish and
-            integrated SaaS surfaces; open-source challengers emphasize transparency, extensibility, and cost governance. Procurement
-            decisions increasingly map to these axes rather than sheer parameter counts.
-          </p>
-          <h3>6. Governance and Trust Considerations</h3>
-          <p>
-            Open-source status does not automatically confer safety. Enterprises must overlay policy layers: prompt injection defenses,
-            tool invocation constraints, audit logging, and continuous evaluation against bias & leakage scenarios. Auxiliary guardian
-            models (policy filters) form a defense-in-depth pattern. The shift elevates AI risk management from vendor dependency toward
-            internal capability maturity.
-          </p>
-          <h3>7. Strategic Outlook</h3>
-          <p>
-            The open-source milestone signals acceleration toward composable AI stacks: lightweight specialized experts coordinated by
-            orchestration agents, enriched by retrieval, planning, and verification loops. Future differentiators will likely center on
-            reliability under autonomous multi-step workflows and verifiable traceability of reasoning paths.
+            <strong>Published:</strong> November 17, 2025 | <strong>Author:</strong> Aili McConnon, IBM Think
           </p>
           <p>
-            <strong>Source Reference:</strong> IBM Think (Aili McConnon), "The open-source breakthrough shifting AI's center of gravity," Nov 17, 2025.{' '}
-            <a href="https://www.ibm.com/think/news/open-source-models-surpass-closed-models" target="_blank" rel="noopener noreferrer">Article Link</a>
+            The question of whether open-source AI systems can outperform closed ones has been hotly debated, but the answer may 
+            finally be yes. Chinese AI research lab Moonshot AI's newest model, Kimi K2 Thinking, is an open-source agent that 
+            outperforms OpenAI's ChatGPT and xAI's Grok on key benchmarks like Humanity's Last Exam and BrowseComp, according to 
+            Moonshot AI. IBM Principal Research Scientist Kaoutar El Maghraoui called this "a big open source milestone and a 
+            challenge to the entire closed AI economy," noting that if the best model in the world is open weight, "the center 
+            of gravity in AI shifts from secret models to shared ecosystems."
           </p>
-          <hr />
-          <h2 id="gemini-heading">Supplement: Gemini 3 Multimodal & Agentic Advancements</h2>
+          <h3>Understanding Kimi K2 Thinking</h3>
           <p>
-            This supplemental section analyzes Google's Gemini 3 release (Nov 20, 2025) and its positioning in high-stakes reasoning and
-            multimodal orchestration. The model integrates text, images, audio, and video into a unified context window, reducing friction
-            in cross-media tasks (e.g., synthesizing visual evidence and narrative explanation). Benchmarks show jumps in complex reasoning
-            suites (ARC-AGI variants, GPQA Diamond), suggesting stronger internal abstraction layering and tool reasoning alignment.
+            A core feature of the Kimi K2 Thinking model is its ability to reason step by step while using tools. Specifically, 
+            it can execute up to 200-300 sequential tool calls without human intervention, meaning the model can call external 
+            tools one after another, in a specific order, using one tool's output as the next tool's input. This is especially 
+            useful for multi-step research and reasoning tasks, where a model must gather new information, update its reasoning 
+            and explore different tools, in a process called "interleaved thinking." Kimi K2 Thinking's mixture-of-experts 
+            architecture, which activates only relevant parts of its massive trillion parameters, further boosts its efficiency.
           </p>
-          <h3>1. Unified Multimodal Context Window</h3>
+          <h3>Enterprise Implications</h3>
           <p>
-            Gemini 3 treats heterogeneous inputs as first-class tokens inside a single attention space. This design streamlines workflows
-            like code + diagram + natural language reviews without external stitching layers. It also improves temporal and spatial referencing
-            for video frame analysis, enabling more coherent event extraction pipelines.
+            That combination of performance and efficiency is particularly interesting for companies, El Maghraoui explained: 
+            "For enterprises, this open-way dominance really means that you can finally bring top-tier reasoning in-house, with 
+            much lower costs." IBM Fellow Aaron Baughman cautioned that while it's exciting to see open-source models performing 
+            so well, additional verification is needed: "I think a third-party independent assessment needs to be made around this 
+            model, too."
           </p>
-          <h3>2. Agentic Tooling Ecosystem (Antigravity)</h3>
+          <h3>From Model IQ to Model EQ</h3>
           <p>
-            The Antigravity environment extends the model beyond passive generation into active task planning: launching terminal sessions,
-            invoking tools across browser-like contexts, and distributing subtasks to delegate worker agents. This indicates a shift from
-            single-response paradigms toward persistent, stateful execution graphs—critical for enterprise automation and long-horizon tasks.
+            Capability and efficiency may no longer be enough to distinguish a model. OpenAI's newest closed frontier model 
+            GPT-5.1, which arrived just six days after Kimi K2 Thinking, focused on user experience rather than raw power alone. 
+            OpenAI stated: "We heard clearly from users that great AI should not only be smart, but also enjoyable to talk to." 
+            The result is a warmer, more conversational agent. Baughman explained this develops "a sense of empathy with the user 
+            and trust," noting that ChatGPT 5.1's router can provide instant responses cost-effectively when desired, "but if I 
+            need it to go into a deeper chain of thought, it can do that too."
           </p>
-          <h3>3. Reasoning + Planning Gains</h3>
+          <h3>Market Segmentation: Intelligence as Commodity</h3>
           <p>
-            Improvements on reasoning benchmarks reflect enhanced multi-step planning fidelity and reduced derailment in extended chains.
-            Where earlier models opportunistically approximated steps, Gemini 3 exhibits tighter adherence to structured planning traces,
-            useful for reproducible analytic audits and regulated reporting workflows.
-          </p>
-          <h3>4. Ecosystem Differentiation</h3>
-          <p>
-            Competitive edge shifts from raw parameter bragging rights to surrounding orchestration tools. Gemini 3 leverages integrated
-            developer assets to produce working prototypes (e.g., dashboard scaffolds) with fewer clarifying prompts. This reduces iteration
-            latency and accelerates concept-to-utility cycles.
-          </p>
-          <h3>5. Human Factors & Limitations</h3>
-          <p>
-            Despite gains, hallucination risk persists—testers note confident but incorrect elaborations under sparse constraints. Sustainable
-            deployment still requires layered verification (retrieval grounding, policy filters, and post-generation validation). The trajectory
-            suggests future focus on dynamic self-critique and transparent reasoning artifact emission.
+            According to El Maghraoui, differentiating models through user experience may signal a world "where raw intelligence 
+            is becoming a commodity." She noted: "We're starting to see a segmentation of markets between models that are focused 
+            on pure efficiency, and models that are trying to win with user experience and personality. It's a battle between model 
+            IQ versus model EQ."
           </p>
           <p>
-            <strong>Source Reference:</strong> IBM Think (Sascha Brodsky), "New Gemini model boosts Google's standing in high-stakes AI tests," Nov 20, 2025.{' '}
-            <a href="https://www.ibm.com/think/news/gemini-3-boosts-googles-standing-in-ai-tests" target="_blank" rel="noopener noreferrer">Article Link</a>
+            <strong>Source:</strong> IBM Think, "The open-source breakthrough shifting AI's center of gravity," by Aili McConnon, November 17, 2025.{' '}
+            <a href="https://www.ibm.com/think/news/open-source-models-surpass-closed-models" target="_blank" rel="noopener noreferrer">
+              https://www.ibm.com/think/news/open-source-models-surpass-closed-models
+            </a>
+          </p>
+          <hr style={{margin: '2rem 0'}} />
+          <h2 id="gemini-heading">Article 2: New Gemini Model Boosts Google's Standing in High-Stakes AI Tests</h2>
+          <p>
+            <strong>Published:</strong> November 20, 2025 | <strong>Author:</strong> Sascha Brodsky, IBM Think
+          </p>
+          <p>
+            Google's Gemini 3 launched this week with impressive gains on some of the field's hardest reasoning evaluations, 
+            a shift IBM researchers say reflects a real advance in Google's frontier-model capabilities. Gemini 3 introduces 
+            a set of feature upgrades that Google describes as a step up in practical capability. According to the company's 
+            announcement, the model now handles text, images, audio and video in a single context window; adds new agentic-coding 
+            tools that let developers generate working applications from prompts; and expands its reach across Google Search, 
+            the Gemini app and enterprise platforms such as Vertex AI.
+          </p>
+          <h3>Benchmark Performance</h3>
+          <p>
+            Google highlighted benchmark jumps that it says reflect improvements in reasoning and tool use. The company boasted 
+            gains on ARC-AGI, stronger performance in terminal-based code execution, and better results on developer-oriented 
+            tasks that require planning steps and running tools. These improvements demonstrate Gemini 3's enhanced ability to 
+            handle complex, multi-step reasoning challenges.
+          </p>
+          <h3>The Antigravity Development Environment</h3>
+          <p>
+            Google is positioning Gemini 3 as the centerpiece of a broader ecosystem built around agentic tooling and 
+            cross-application coordination. Central to that effort is Antigravity, an integrated development environment designed 
+            to let the model plan tasks, call tools, operate across terminals and browsers, and distribute work among multiple 
+            agents. This represents a fundamental shift from single-response AI interactions to persistent, stateful execution 
+            workflows that can handle enterprise automation and long-horizon tasks.
+          </p>
+          <h3>Strategic Positioning</h3>
+          <p>
+            The launch positions Gemini 3 as a multimodal reasoning platform rather than just a language model. By integrating 
+            diverse input types into a unified context and providing sophisticated tooling for agentic workflows, Google is betting 
+            that competitive advantage will come from ecosystem capabilities and cross-application coordination rather than raw 
+            parameter counts alone. This aligns with broader industry trends toward AI systems that can autonomously plan, execute, 
+            and coordinate complex tasks across multiple domains.
+          </p>
+          <p>
+            <strong>Source:</strong> IBM Think, "New Gemini model boosts Google's standing in high-stakes AI tests," by Sascha Brodsky, November 20, 2025.{' '}
+            <a href="https://www.ibm.com/think/news/gemini-3-boosts-googles-standing-in-ai-tests" target="_blank" rel="noopener noreferrer">
+              https://www.ibm.com/think/news/gemini-3-boosts-googles-standing-in-ai-tests
+            </a>
           </p>
         </section>
 

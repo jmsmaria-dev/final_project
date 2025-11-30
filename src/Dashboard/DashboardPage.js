@@ -10,23 +10,22 @@ export default function DashboardPage() {
         <section aria-labelledby="summary-section-heading" style={{marginBottom:'2rem'}}>
           <h2 id="summary-section-heading">Recent Innovations in Generative AI</h2>
           <p style={{lineHeight:'1.8', textAlign:'left', marginBottom:'1rem'}}>
-            The past six months have witnessed transformative breakthroughs in generative AI, fundamentally reshaping 
-            the competitive landscape between open-source and proprietary models. Most notably, Moonshot AI's Kimi K2 
-            Thinking model has emerged as a watershed moment, demonstrating that open-source systems can now outperform 
-            leading closed models like OpenAI's ChatGPT and xAI's Grok on rigorous benchmarks including Humanity's Last 
-            Exam and BrowseComp. Leveraging a sophisticated mixture-of-experts architecture with up to a trillion parameters, 
-            K2 executes 200-300 sequential tool calls autonomously, marking what IBM researchers call "a big open source 
-            milestone and a challenge to the entire closed AI economy." Simultaneously, Google's Gemini 3 has advanced 
-            multimodal capabilities by integrating text, images, audio, and video within unified context windows, achieving 
-            significant gains on difficult evaluations like ARC-AGI and GPQA Diamond. The Antigravity development environment 
-            enables Gemini 3 to orchestrate complex multi-agent workflows across terminals and browsers. These parallel 
-            developments signal a strategic inflection: competitive advantage is migrating from raw parameter counts toward 
-            ecosystem tooling, transparency, cost governance, and agentic orchestration capabilities. Enterprises can now 
-            deploy top-tier reasoning models in-house while maintaining auditability and jurisdictional compliance, 
-            fundamentally democratizing access to frontier AI capabilities.
+            Can open-source AI systems outperform closed ones? Thanks to the newest model from Chinese AI research lab 
+            Moonshot AI, the answer may finally be yes. Kimi K2 Thinking is an open-source agent that uses a mixture-of-experts 
+            architecture and outperforms OpenAI's ChatGPT and xAI's Grok on key benchmarks like Humanity's Last Exam and 
+            BrowseComp. IBM Principal Research Scientist Kaoutar El Maghraoui noted this represents "a big open source milestone 
+            and a challenge to the entire closed AI economy," explaining that "if the best model in the world is open weight, 
+            the center of gravity in AI shifts from secret models to shared ecosystems." A core feature of Kimi K2 Thinking 
+            is its ability to reason step by step while using tools, executing up to 200-300 sequential tool calls without 
+            human intervention through a process called "interleaved thinking." For enterprises, this open-weight dominance 
+            means organizations can finally bring top-tier reasoning in-house with much lower costs. Meanwhile, OpenAI's 
+            newest frontier model GPT-5.1 shifted focus beyond raw power to user experience, becoming warmer and more 
+            conversational based on user feedback. This signals a broader market segmentation between models focused on 
+            pure efficiency versus those competing on personality—"a battle between model IQ versus model EQ," as El Maghraoui 
+            described it, suggesting raw intelligence is becoming commoditized while differentiation moves toward user experience.
           </p>
           <p style={{textAlign:'left', fontSize:'0.9rem', color:'#888'}}>
-            <strong>Source:</strong> IBM Think, "The open-source breakthrough shifting AI's center of gravity," November 17, 2025.{' '}
+            <strong>Source:</strong> IBM Think, "The open-source breakthrough shifting AI's center of gravity," by Aili McConnon, November 17, 2025.{' '}
             <a href="https://www.ibm.com/think/news/open-source-models-surpass-closed-models" target="_blank" rel="noopener noreferrer" style={{color:'#61dafb'}}>
               https://www.ibm.com/think/news/open-source-models-surpass-closed-models
             </a>
@@ -56,14 +55,14 @@ export default function DashboardPage() {
             <li style={{marginBottom:'0.75rem'}}>
               <h3 style={{margin:0}}>
                 <Link to="/summary" aria-label="Open-Source AI Models Surpass Closed Systems (go to Summary page)">
-                  1. Open-Source AI Models Surpass Closed Systems
+                  1. The Open-Source Breakthrough Shifting AI's Center of Gravity
                 </Link>
               </h3>
             </li>
             <li>
               <h3 style={{margin:0}}>
-                <Link to="/summary" aria-label="Google's Gemini 3 Advances Multimodal AI Capabilities (go to Summary page)">
-                  2. Google's Gemini 3 Advances Multimodal AI Capabilities
+                <Link to="/summary" aria-label="Gemini 3 Boosts Google's Standing in High-Stakes AI Tests (go to Summary page)">
+                  2. New Gemini Model Boosts Google's Standing in High-Stakes AI Tests
                 </Link>
               </h3>
             </li>

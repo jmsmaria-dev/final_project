@@ -67,23 +67,24 @@ export default function SummaryPage() {
 
         <article className="article-summary" aria-labelledby="article2-heading">
           <h3 id="article2-heading">
-            <Link to="/reports" aria-label="Go to full report for Google's Gemini 3 Advances Multimodal AI Capabilities">
-              2. Google's Gemini 3 Advances Multimodal AI Capabilities
+            <Link to="/reports" aria-label="Go to full report for Gemini 3 Boosts Google's Standing in High-Stakes AI Tests">
+              2. New Gemini Model Boosts Google's Standing in High-Stakes AI Tests
             </Link>
           </h3>
           <p>
-            Google's Gemini 3 launched in November 2025 with significant improvements in reasoning and agentic 
-            capabilities. The model handles text, images, audio, and video in a single context window and shows 
-            impressive gains on difficult evaluations like ARC-AGI and GPQA Diamond. Central to Gemini 3's 
-            ecosystem is Antigravity, an integrated development environment that enables the model to plan tasks, 
-            operate across terminals and browsers, and distribute work among multiple agents. IBM researchers 
-            note that "a really great model is not that differentiated anymore," emphasizing that competitive 
-            advantage now lies in the surrounding tools and the model's ability to handle complex, multi-agent 
-            workflows rather than raw performance metrics alone.
+            Google's Gemini 3 launched this week with impressive gains on some of the field's hardest reasoning 
+            evaluations, a shift IBM researchers say reflects a real advance in Google's frontier-model capabilities. 
+            The model introduces feature upgrades including handling text, images, audio and video in a single context 
+            window, plus new agentic-coding tools that let developers generate working applications from prompts. 
+            Google highlighted benchmark jumps on ARC-AGI, stronger performance in terminal-based code execution, and 
+            better results on developer-oriented tasks requiring planning steps and running tools. Central to Gemini 3's 
+            ecosystem is Antigravity, an integrated development environment designed to let the model plan tasks, call 
+            tools, operate across terminals and browsers, and distribute work among multiple agents. The model now 
+            reaches across Google Search, the Gemini app, and enterprise platforms such as Vertex AI.
           </p>
           <p>
             <strong>Source:</strong> IBM Think, "New Gemini model boosts Google's standing in high-stakes AI tests," 
-            November 20, 2025.{' '}
+            by Sascha Brodsky, November 20, 2025.{' '}
             <a href="https://www.ibm.com/think/news/gemini-3-boosts-googles-standing-in-ai-tests" target="_blank" rel="noopener noreferrer">
               https://www.ibm.com/think/news/gemini-3-boosts-googles-standing-in-ai-tests
             </a>
